@@ -22,6 +22,8 @@ onMounted(() => {
     const jobs = JSON.parse(localStorage.getItem('jobs'));
     if (jobs) {
       state.jobs = jobs;
+    } else {
+      console.error('No jobs data found in localStorage');
     }
   } catch (error) {
     console.error('Error retrieving jobs from localStorage', error);
@@ -52,7 +54,6 @@ onMounted(() => {
       </div>
     </div>
   </section>
-
   <section v-if="showButton" class="m-auto max-w-lg my-10 px-6">
     <RouterLink
       to="/jobs"
