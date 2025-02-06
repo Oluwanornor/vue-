@@ -47,7 +47,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <section class="bg-green-50">
+  <section class="bg-blue-50">
     <div class="container m-auto max-w-2xl py-24">
       <div
         class="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
@@ -83,7 +83,7 @@ const handleSubmit = async () => {
               id="name"
               name="name"
               class="border rounded w-full py-2 px-3 mb-2"
-              placeholder="eg. Beautiful Apartment In Miami"
+              placeholder="eg. Full Time Customer Care Representative"
               required
             />
           </div>
