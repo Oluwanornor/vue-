@@ -16,12 +16,8 @@ app.use(Toast);
 // Fetch and store jobs data in localStorage
 const fetchAndStoreJobs = async () => {
   try {
-    const response = await axios.get('/src/jobs.json');
-    if (response.data && response.data.job) {
-      localStorage.setItem('jobs', JSON.stringify(response.data.job));
-    } else {
-      console.error('Invalid jobs data', response.data);
-    }
+    const response = await axios.get('/jobs.json');
+    localStorage.setItem('jobs', JSON.stringify(response.data.job));
   } catch (error) {
     console.error('Error fetching jobs', error);
   }
